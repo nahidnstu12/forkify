@@ -182,7 +182,9 @@ body {
   display: flex;
   align-items: center;
   padding-left: 3rem;
-  transition: all .3s; }
+  transition: all .3s; 
+  position: relative;
+}
   .search:focus-within {
     transform: translateY(-2px);
     box-shadow: 0 0.7rem 3rem rgba(101, 90, 86, 0.08); }
@@ -197,6 +199,22 @@ body {
       outline: none; }
     .search__field::placeholder {
       color: #DAD0CC; }
+
+  .search__panel{
+    position: absolute;
+    left: 470px;
+    top: 13rem;
+    z-index: 10;
+    padding: 2rem 0;
+    width: 34rem;
+    background-color: #fff;
+    box-shadow: 0 0.8rem 5rem 2rem rgba(101, 90, 86, 0.1);
+    transition: all .5s .2s;
+    list-style: none;
+    color: #F59A83;
+    cursor: pointer;
+  }
+  
 
       /* Likes Style */
 .likes {

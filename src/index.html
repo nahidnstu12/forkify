@@ -16,14 +16,17 @@
         <header class="header">
             <img src="img/logo.png" alt="Logo" class="header__logo">
             <form class="search">
-                <input type="text" class="search__field" placeholder="Search over 1,000,000 recipes...">
+                <input type="text" class="search__field name" placeholder="Search over 1,000,000 recipes..." name="name" autocomplete="off">
+                
                 <button class="btn search__btn">
                     <svg class="search__icon">
                         <use href="img/icons.svg#icon-magnifying-glass"></use>
                     </svg>
                     <span>Search</span>
-                </button>
+                </button>  
             </form>
+            <div class="matchList search__panel" style="visibility: hidden;">
+            </div>
             <div class="likes">
                 <div class="likes__field">
                     <svg class="likes__icon">
@@ -258,13 +261,12 @@
             <a class="button u-full-width" id="clear-list">Clear All</a>
 
             <div class="copyright">
-                &copy; by Nahid Stack. Powered by
+                &copy; by Nahidis Stack. Powered by
                 <a href="http://food2fork.com" target="_blank" class="link">Food2Fork.com</a>.
             </div>
 
         </div>
     </div>
-
     <!-- <script  src="js/bundle.js"></script> -->
 </body>
 

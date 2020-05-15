@@ -1,4 +1,4 @@
-import {elements} from './base'
+import {elements,seachList} from './base'
 
 export const getInput = ()=>elements.searchInp.value
 export const clearField = () => elements.searchInp.value = ""
@@ -22,6 +22,33 @@ export const renderResult = (recipes,page=1,perPage=10) =>{
     renderBtn(page,recipes.length,perPage)
    
 }
+export const autoComplete = search =>{
+    const lists = seachList.sort()
+    let matches = lists.filter(list =>{
+        const regx = new RegExp(`^${search}`,'gi')
+        return list.match(regx)
+    })
+    if(search.length === 0){
+        matches = []
+    }
+    outputHtml(matches)
+    // console.log(matches)
+}
+const outputHtml = matches =>{
+    if(matches.length >0  ){
+
+        const html = matches.slice(0,6).map(match => `
+        <li>
+        <h2 id="item" style="text-align:center">${match}</h2>
+        </li>
+        `).join('')
+        elements.matchList.innerHTML = html
+    } 
+        elements.matchList.style.visibility =  matches.length===0 ? 'hidden' : 'visible'
+    
+   
+}
+
 
 const searchedRecipe = recipe =>{
     const markup = `

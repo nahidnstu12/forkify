@@ -39,7 +39,16 @@ const ctrlSearch = async ()=>{
 // submit search
 elements.searchForm.addEventListener('submit',e =>{
     e.preventDefault()
-    ctrlSearch()
+    ctrlSearch() 
+    elements.matchList.style.visibility = 'hidden' 
+})
+
+// autoComplete search lists
+elements.searchForm.addEventListener('input',()=>searchView.autoComplete(elements.searchInp.value))
+
+elements.matchList.addEventListener('click',e =>{
+    elements.searchInp.value = e.target.textContent;
+    elements.searchInp.focus()
 })
 
 // pagination
