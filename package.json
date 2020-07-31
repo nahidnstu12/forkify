@@ -31,10 +31,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nahidnstu12/setup-JS.git"
+    "url": "git+https://github.com/nahidnstu12/forkify.git"
   },
   "bugs": {
-    "url": "https://github.com/nahidnstu12/setup-JS/issues"
+    "url": "https://github.com/nahidnstu12/forkify/issues"
   },
-  "homepage": "https://github.com/nahidnstu12/setup-JS#readme"
+  "homepage": "https://github.com/nahidnstu12/forkify"
 }

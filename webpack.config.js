@@ -1,7 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+module.exports = (env,config) =>{
+    const mode = argv.mode || 'development';
+    const config={
     entry: ['@babel/polyfill', './src/js/index.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -26,5 +28,8 @@ module.exports = {
             }
         }]
     },
-    devtool:'inline-source-map',
+    // devtool:'inline-source-map',
+    devtool: mode === 'development' ? 'cheap-module-eval-source-map' : false
+}
+return config;
 };
