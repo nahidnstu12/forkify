@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = (env,config) =>{
+module.exports = (env,argv) =>{
     const mode = argv.mode || 'development';
     const config={
     entry: ['@babel/polyfill', './src/js/index.js'],
